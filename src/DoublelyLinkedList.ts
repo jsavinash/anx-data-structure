@@ -13,7 +13,7 @@ export interface IDoublelyLinkedList {
     traverseReverse(callback: (node: nodeType) => void): void
 }
 
-class DoublelyLinkedListNode {
+export class DoublelyLinkedListNode {
     public data: number;
     public next: DoublelyLinkedListNode | null;
     public previous: DoublelyLinkedListNode | null;
@@ -24,7 +24,7 @@ class DoublelyLinkedListNode {
     }
 }
 
-class DoublelyLinkedList implements IDoublelyLinkedList {
+export class DoublelyLinkedList implements IDoublelyLinkedList {
     public numberOfValues = 0;
     public head: nodeType = null;
     public tail: nodeType = null;
@@ -128,22 +128,4 @@ class DoublelyLinkedList implements IDoublelyLinkedList {
         }
     }
 }
-
-const newDoublelyLinkedListObject = new DoublelyLinkedList();
-newDoublelyLinkedListObject.addNode(1);
-newDoublelyLinkedListObject.addNode(2);
-newDoublelyLinkedListObject.addNode(3);
-newDoublelyLinkedListObject.addNode(4);
-newDoublelyLinkedListObject.displayNodes();
-newDoublelyLinkedListObject.insertAfterNode(6, 3);
-newDoublelyLinkedListObject.displayNodes();
-newDoublelyLinkedListObject.length();
-newDoublelyLinkedListObject.removeNode(2);
-newDoublelyLinkedListObject.displayNodes();
-console.log('***********Traversing node**********');
-newDoublelyLinkedListObject.traverse((node: nodeType) => {
-    if (node) {
-        console.log('Node value', node.data);
-    }
-});
 

@@ -11,7 +11,7 @@ export interface ISinglyLinkedList {
     displayNodes(): void;
 }
 
-class SinglyLinkedNode {
+export class SinglyLinkedNode {
     public data: number;
     public next: SinglyLinkedNode | null;
     constructor(data: number) {
@@ -19,7 +19,7 @@ class SinglyLinkedNode {
         this.next = null;
     }
 }
-class SinglyLinkedList implements ISinglyLinkedList {
+export class SinglyLinkedList implements ISinglyLinkedList {
     public numberOfValue = 0;
     public head: nodeType = null;
     public tail: nodeType = null;
@@ -111,22 +111,4 @@ class SinglyLinkedList implements ISinglyLinkedList {
     }
 }
 
-
-const newSinglyLinkedListObject = new SinglyLinkedList();
-newSinglyLinkedListObject.addNode(1);
-newSinglyLinkedListObject.addNode(2);
-newSinglyLinkedListObject.addNode(3);
-newSinglyLinkedListObject.addNode(4);
-newSinglyLinkedListObject.displayNodes();
-newSinglyLinkedListObject.insertAfterNode(6, 3);
-newSinglyLinkedListObject.displayNodes();
-newSinglyLinkedListObject.length();
-newSinglyLinkedListObject.removeNode(2);
-newSinglyLinkedListObject.displayNodes();
-console.log('***********Traversing node**********');
-newSinglyLinkedListObject.traverse((node: nodeType) => {
-    if (node) {
-        console.log('Node value', node.data);
-    }
-});
 
