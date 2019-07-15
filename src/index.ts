@@ -25,14 +25,24 @@ import { SinglyLinkedList, nodeType } from './SinglyLinkedList';
 
 
 // console.log('***********Start CircularSinglyLinkedList**********');
-const newCircularSinglyLinkedListObject = new CircularSinglyLinkedList();
-newCircularSinglyLinkedListObject.addNode(1);
-newCircularSinglyLinkedListObject.addNode(2);
-newCircularSinglyLinkedListObject.addNode(3);
-newCircularSinglyLinkedListObject.addNode(4);
-newCircularSinglyLinkedListObject.displayNodes();
-newCircularSinglyLinkedListObject.removeNode(4);
-newCircularSinglyLinkedListObject.displayNodes();
+const newCircularSinglyLinkedList = new CircularSinglyLinkedList<number>();
+newCircularSinglyLinkedList.insertAtEnd(1);
+newCircularSinglyLinkedList.insertAtEnd(3);
+newCircularSinglyLinkedList.insertAtEnd(4);
+newCircularSinglyLinkedList.display();
+
+// newCircularSinglyLinkedList.display();
+// const position = 2;
+// if (position <= 1 || position > newCircularSinglyLinkedList.getSize())
+// console.log('Invalid position');
+// else
+// newCircularSinglyLinkedList.insertAtPos(2, position);
+// if (position < 1 || position > newCircularSinglyLinkedList.getSize())
+// console.log('Invalid position');
+// else
+// newCircularSinglyLinkedList.deleteAtPos(position);
+// console.log('Empty status', newCircularSinglyLinkedList.isEmpty());
+// console.log('Size', newCircularSinglyLinkedList.getSize());
 // console.log('***********End CircularSinglyLinkedList**********');
 
 
@@ -55,4 +65,6 @@ newCircularSinglyLinkedListObject.displayNodes();
 //     }
 // });
 // console.log('***********End DoublelyLinkedList**********');
+
+
 
