@@ -81,7 +81,7 @@ class SinglyLinkedList implements ISinglyLinkedList {
         }
     }
 
-    public traverse = (callback: (node: SinglyLinkedNode | null) => void): void => {
+    public traverse = (callback: (node: nodeType) => void): void => {
         let currentNode: nodeType = this.head;
         while (currentNode) {
             callback(currentNode);
