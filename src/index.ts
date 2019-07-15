@@ -1,6 +1,20 @@
 import { CircularSinglyLinkedList } from './CircularSinglyLinkedList';
 import { DoublelyLinkedList } from './DoublelyLinkedList';
 import { SinglyLinkedList, nodeType } from './SinglyLinkedList';
+import { HashTable } from './HashTable';
+
+
+
+const hash = new HashTable(2);
+hash.insert(1);
+hash.insert(2);
+hash.insert(3);
+hash.insert(4);
+hash.printTable();
+hash.clear();
+hash.printTable();
+
+
 
 // console.log('***********Start SinglyLinkedList**********');
 // const newSinglyLinkedListObject = new SinglyLinkedList();
@@ -25,11 +39,11 @@ import { SinglyLinkedList, nodeType } from './SinglyLinkedList';
 
 
 // console.log('***********Start CircularSinglyLinkedList**********');
-const newCircularSinglyLinkedList = new CircularSinglyLinkedList<number>();
-newCircularSinglyLinkedList.insertAtEnd(1);
-newCircularSinglyLinkedList.insertAtEnd(3);
-newCircularSinglyLinkedList.insertAtEnd(4);
-newCircularSinglyLinkedList.display();
+// const newCircularSinglyLinkedList = new CircularSinglyLinkedList<number>();
+// newCircularSinglyLinkedList.insertAtEnd(1);
+// newCircularSinglyLinkedList.insertAtEnd(3);
+// newCircularSinglyLinkedList.insertAtEnd(4);
+// newCircularSinglyLinkedList.display();
 
 // newCircularSinglyLinkedList.display();
 // const position = 2;
