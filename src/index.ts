@@ -1,19 +1,22 @@
-import { CircularSinglyLinkedList } from './CircularSinglyLinkedList';
-import { DoublelyLinkedList } from './DoublelyLinkedList';
-import { SinglyLinkedList, nodeType } from './SinglyLinkedList';
+import { CircularSinglyLinkedList } from './List/CircularSinglyLinkedList';
+import { DoublelyLinkedList } from './List/DoublelyLinkedList';
+import { SinglyLinkedList, nodeType } from './List/SinglyLinkedList';
 import { HashTable } from './HashTable';
+import { LinearSearch } from './Search/Linear';
 
 
 
-const hash = new HashTable(2);
-hash.insert(1);
-hash.insert(2);
-hash.insert(3);
-hash.insert(4);
-hash.printTable();
-hash.clear();
-hash.printTable();
+// const hash = new HashTable(2);
+// hash.insert(1);
+// hash.insert(2);
+// hash.insert(3);
+// hash.insert(4);
+// hash.printTable();
+// hash.clear();
+// hash.printTable();
 
+const newLinear = new LinearSearch();
+console.log('Finding 10', newLinear.findElement(9));
 
 
 // console.log('***********Start SinglyLinkedList**********');
