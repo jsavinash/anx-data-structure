@@ -92,3 +92,11 @@ export class Stack<T> implements IQueue<T> {
         }
     }
 }
+
+
+// Time Complexity
+// Access  Insertio  Deletion
+//  O(n)	 O(1)	    O(1)
+
+// Space Complexity
+// O(1)

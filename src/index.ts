@@ -3,6 +3,7 @@ import { DoublelyLinkedList } from './List/DoublelyLinkedList';
 import { SinglyLinkedList, nodeType } from './List/SinglyLinkedList';
 import { HashTable } from './HashTable';
 import { LinearSearch } from './Search/Linear';
+import { BinarySearch } from './Search/Binary';
 
 
 
@@ -15,9 +16,16 @@ import { LinearSearch } from './Search/Linear';
 // hash.clear();
 // hash.printTable();
 
-const newLinear = new LinearSearch();
-console.log('Finding 10', newLinear.findElement(9));
+// const newLinear = new LinearSearch();
+// console.log('Finding 10', newLinear.findElement(9));
 
+const newBinary = new BinarySearch();
+// console.log('Finding 10', newBinary.findElement(10));
+
+// console.log('Finding 140', newBinary.findElement(141));
+// console.log('Finding 80', newBinary.findElement(80));
+// console.log('Finding 50', newBinary.findElement(50));
+// console.log('Finding 5', newBinary.findElement(5));
 
 // console.log('***********Start SinglyLinkedList**********');
 // const newSinglyLinkedListObject = new SinglyLinkedList();
