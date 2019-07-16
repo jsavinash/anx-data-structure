@@ -37,4 +37,4 @@ export class InterpolationSearch implements IInterpolationSearch {
     }
 }
 
-// Time Complexity: O(n) - since in worst case we're checking each element exactly once.
+// Time Complexity: Ο(log (log n)) - since in worst case we're checking each element exactly once.
