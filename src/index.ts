@@ -4,6 +4,7 @@ import { SinglyLinkedList, nodeType } from './List/SinglyLinkedList';
 import { HashTable } from './HashTable';
 import { LinearSearch } from './Search/Linear';
 import { BinarySearch } from './Search/Binary';
+import { UndirectedGraph } from './Graph/UndirectedGraph';
 import { InterpolationSearch } from './Search/Interpolation';
 
 
@@ -20,11 +21,29 @@ import { InterpolationSearch } from './Search/Interpolation';
 // const newLinear = new LinearSearch();
 // console.log('Finding 10', newLinear.findElement(9));
 
-const newBinary = new InterpolationSearch();
+const newUndirectedGraph = new UndirectedGraph<number>();
+newUndirectedGraph.addVertex(1);
+newUndirectedGraph.addVertex(2);
+newUndirectedGraph.addVertex(3);
+newUndirectedGraph.addVertex(4);
+newUndirectedGraph.addVertex(5);
+newUndirectedGraph.addVertex(6);
+newUndirectedGraph.addEdge(1, 6);
+newUndirectedGraph.print();
+newUndirectedGraph.removeEdge(1, 6);
+newUndirectedGraph.print();
+newUndirectedGraph.addEdge(1, 6);
+newUndirectedGraph.addEdge(1, 2);
+newUndirectedGraph.addEdge(1, 3);
+newUndirectedGraph.addEdge(1, 4);
+newUndirectedGraph.addEdge(1, 5);
+newUndirectedGraph.print();
+
+// const newBinary = new InterpolationSearch();
 // console.log('Finding 10', newBinary.findElement(11));
 
 // console.log('Finding 140', newBinary.findElement(141));
-console.log('Finding 80', newBinary.findElement(80));
+// console.log('Finding 80', newBinary.findElement(80));
 // console.log('Finding 50', newBinary.findElement(50));
 // console.log('Finding 5', newBinary.findElement(5));
 
