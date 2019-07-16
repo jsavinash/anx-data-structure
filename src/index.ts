@@ -4,6 +4,7 @@ import { SinglyLinkedList, nodeType } from './List/SinglyLinkedList';
 import { HashTable } from './HashTable';
 import { LinearSearch } from './Search/Linear';
 import { BinarySearch } from './Search/Binary';
+import { InterpolationSearch } from './Search/Interpolation';
 
 
 
@@ -19,11 +20,11 @@ import { BinarySearch } from './Search/Binary';
 // const newLinear = new LinearSearch();
 // console.log('Finding 10', newLinear.findElement(9));
 
-const newBinary = new BinarySearch();
-// console.log('Finding 10', newBinary.findElement(10));
+const newBinary = new InterpolationSearch();
+// console.log('Finding 10', newBinary.findElement(11));
 
 // console.log('Finding 140', newBinary.findElement(141));
-// console.log('Finding 80', newBinary.findElement(80));
+console.log('Finding 80', newBinary.findElement(80));
 // console.log('Finding 50', newBinary.findElement(50));
 // console.log('Finding 5', newBinary.findElement(5));
 
