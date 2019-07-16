@@ -66,15 +66,9 @@ export class Queue<T> implements IQueue<T> {
     }
 
     public denqueue = () => {
-        const newNode: nodeType<T> = this.front;
-        this.size++;
-        if (this.front == null) {
-            this.front = newNode;
-            this.rear = this.front;
-        }
-        else {
-            if (newNode) newNode.setNext(this.front);
-            this.front = newNode;
+        const topNode: nodeType<T> = this.rear;
+        if (topNode) {
+            this.rear = topNode.getNext();
         }
     }
     public peak = (): T | null => {
