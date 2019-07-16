@@ -45,7 +45,7 @@ export class UndirectedGraph<T> {
         });
         if (foundVertexIndex > -1) {
             this.edges.map((graphEdge: GraphEdge<T>, index: number) => {
-                if (graphEdge.ref === this.vertices[foundVertexIndex]) {
+                if (graphEdge.ref.data === this.vertices[foundVertexIndex].data) {
                     foundEdgeIndex = index;
                     return;
                 }
