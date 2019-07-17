@@ -1,8 +1,3 @@
-
-
-
-
-
 export interface IGraphNode<T> {
     pushEdges(edges: T): void;
 }
@@ -124,7 +119,7 @@ export class DirectedGraph<T> {
                 return;
             }
         });
-        
+
         this.edges[foundVertexIndex1].edges = this.edges[foundVertexIndex1].edges.filter((edge: T) => {
             return edge === destinationVertex;
         });
