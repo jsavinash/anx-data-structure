@@ -100,10 +100,10 @@ export class UndirectedGraph<T> {
             }
         });
         this.edges[foundVertexIndex1].edges = this.edges[foundVertexIndex1].edges.filter((edge: GraphVertex<T>) => {
-            return edge.data === vertex1;
+            return edge.data === vertex2;
         });
         this.edges[foundVertexIndex2].edges = this.edges[foundVertexIndex2].edges.filter((edge: GraphVertex<T>) => {
-            return edge.data === vertex2;
+            return edge.data === vertex1;
         });
 
     }
