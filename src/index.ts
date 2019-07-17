@@ -29,16 +29,21 @@ newUndirectedGraph.addVertex(3);
 newUndirectedGraph.addVertex(4);
 newUndirectedGraph.addVertex(5);
 newUndirectedGraph.addVertex(6);
-newUndirectedGraph.addEdge(1, 6);
-newUndirectedGraph.print();
-newUndirectedGraph.removeEdge(1, 6);
-newUndirectedGraph.print();
-newUndirectedGraph.addEdge(1, 6);
 newUndirectedGraph.addEdge(1, 2);
-newUndirectedGraph.addEdge(1, 3);
-newUndirectedGraph.addEdge(1, 4);
 newUndirectedGraph.addEdge(1, 5);
-newUndirectedGraph.print();
+newUndirectedGraph.addEdge(2, 3);
+newUndirectedGraph.addEdge(2, 5);
+newUndirectedGraph.addEdge(3, 4);
+newUndirectedGraph.addEdge(4, 5);
+newUndirectedGraph.addEdge(4, 6);
+newUndirectedGraph.showGraph();
+console.log('*************************BFS Traverse*******************************');
+newUndirectedGraph.traverseBFS(1, (vertex: number) => { console.log(vertex); }); // => 1 2 3 4 5 6
+
+console.log('**************************DFS Traverse*******************************');
+newUndirectedGraph.traversDFS(1, (vertex: number) => { console.log(vertex); }); // => 1 2 3 4 5 6
+
+
 
 // const newBinary = new InterpolationSearch();
 // console.log('Finding 10', newBinary.findElement(11));
