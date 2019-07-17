@@ -106,7 +106,6 @@ export class DirectedGraph<T> {
                 return;
         });
         this.edges[foundVertexIndex1].pushEdges(destinationVertex);
-        this.edges[foundVertexIndex2].pushEdges(sourceVertex);
     }
 
     public removeEdge = (sourceVertex: T, destinationVertex: T) => {
@@ -119,22 +118,15 @@ export class DirectedGraph<T> {
             return;
         }
         let foundVertexIndex1 = -1;
-        let foundVertexIndex2 = -1;
         this.edges.map((graphEdge: GraphNode<T>, index: number) => {
             if (graphEdge.ref === sourceVertex) {
                 foundVertexIndex1 = index;
-            }
-            if (graphEdge.ref === destinationVertex) {
-                foundVertexIndex2 = index;
-            }
-            if (foundVertexIndex1 > -1 && foundVertexIndex2 > -1)
                 return;
+            }
         });
+        
         this.edges[foundVertexIndex1].edges = this.edges[foundVertexIndex1].edges.filter((edge: T) => {
             return edge === destinationVertex;
-        });
-        this.edges[foundVertexIndex2].edges = this.edges[foundVertexIndex2].edges.filter((edge: T) => {
-            return edge === sourceVertex;
         });
     }
 
