@@ -29,7 +29,7 @@ export class DoublelyLinkedList implements IDoublelyLinkedList {
     public head: nodeType = null;
     public tail: nodeType = null;
 
-    public addNode = (data: number): void => {
+    public addNode = (data: number): void => {                                 // O(1); 
         const newNode: nodeType = new DoublelyLinkedListNode(data);
         if (!this.head) {
             this.head = newNode;
@@ -43,7 +43,7 @@ export class DoublelyLinkedList implements IDoublelyLinkedList {
         this.numberOfValues++;
     }
 
-    public removeNode = (data: number): void => {
+    public removeNode = (data: number): void => {                                 // O(n);
         let currentNode: nodeType = this.head;
         let previousNode: nodeType = this.head;
         while (currentNode) {
@@ -67,7 +67,7 @@ export class DoublelyLinkedList implements IDoublelyLinkedList {
             currentNode = currentNode.next;
         }
     }
-    public insertAfterNode = (data: number, nodeValue: number): void => {
+    public insertAfterNode = (data: number, nodeValue: number): void => {          // O(n);
         let currentNode: nodeType = this.head;
         while (currentNode) {
             if (currentNode.data === nodeValue) {
@@ -87,11 +87,11 @@ export class DoublelyLinkedList implements IDoublelyLinkedList {
         }
     }
 
-    public length(): void {
+    public length(): void {                                                             // O(1);
         console.log('Nuber of values in doublely linked list:', this.numberOfValues);
     }
 
-    public traverse = (callback: (node: nodeType) => void): void => {
+    public traverse = (callback: (node: nodeType) => void): void => {                 // O(n)
         let currentNode: nodeType = this.head;
         while (currentNode) {
             callback(currentNode);
@@ -102,7 +102,7 @@ export class DoublelyLinkedList implements IDoublelyLinkedList {
         }
     }
 
-    public traverseReverse = (callback: (node: nodeType) => void): void => {
+    public traverseReverse = (callback: (node: nodeType) => void): void => {        // O(n)
         let currentNode: nodeType = this.tail;
         while (currentNode) {
             callback(currentNode);
@@ -113,7 +113,7 @@ export class DoublelyLinkedList implements IDoublelyLinkedList {
         }
     }
 
-    public displayNodes = () => {
+    public displayNodes = () => {                                             // O(n)
         let currentNode: nodeType = this.head;
         const elementInNode: string[] = [];
         if (!currentNode) {
@@ -130,8 +130,15 @@ export class DoublelyLinkedList implements IDoublelyLinkedList {
 }
 
 // Time Complexity
-// Access	Search	Insertion	Deletion
-//  O(n)	 O(n)	 O(1)	    O(n)
+// length	addNode	removeNode	displayNodes insertAfterNode    traverse      traverseReverse
+//  O(1)	  O(1) 	 O(n)	    O(n)              O(n)            O(n)               O(n)
+
+//complete
+// O(n)
 
 // Space Complexity
+// length	addNode	removeNode	displayNodes insertAfterNode    traverse      traverseReverse
+//  O(1)	  O(1) 	 O(n)	    O(n)              O(n)            O(n)               O(n)
+
+//complete
 // O(n)

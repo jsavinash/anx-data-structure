@@ -5,6 +5,7 @@ import { HashTable } from './HashTable';
 import { LinearSearch } from './Search/Linear';
 import { BinarySearch } from './Search/Binary';
 import { UndirectedGraph } from './Graph/UndirectedGraph';
+import { DirectedGraph } from './Graph/DirectedGraph';
 import { InterpolationSearch } from './Search/Interpolation';
 
 
@@ -21,7 +22,7 @@ import { InterpolationSearch } from './Search/Interpolation';
 // const newLinear = new LinearSearch();
 // console.log('Finding 10', newLinear.findElement(9));
 
-const newUndirectedGraph = new UndirectedGraph<number>();
+const newUndirectedGraph = new DirectedGraph<number>();
 newUndirectedGraph.addVertex(1);
 newUndirectedGraph.addVertex(2);
 newUndirectedGraph.addVertex(3);
