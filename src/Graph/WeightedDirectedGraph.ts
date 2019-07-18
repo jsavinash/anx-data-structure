@@ -18,25 +18,25 @@ class WeightedGraphNode<T> implements IWeightedGraphNode<T> {
     }
 }
 
-export interface DirectedGraph<T> {
+export interface IWeightedDirectedGraph<T> {
     removeEdge(sourceVertex: T, destinationVertex: T): void;
-    addEdge(sourceVertex: T, destinationVertex: T): void;
+    addEdge(sourceVertex: T, destinationVertex: T, weight: number): void;
     pathFromTo(sourceVertex: T, destinationVertex: T): void;
     addVertex(vertex: T): void;
-    size(): number;
-    relation(): void;
+    // size(): number;
+    // relation(): void;
     traversDFS(vertex: T, callback: (vertex: T) => void): void;
-    traversBFS(vertex: T, callback: (vertex: T) => void): void;
+    // traversBFS(vertex: T, callback: (vertex: T) => void): void;
     getShortestPath(sourceVertex: T, destinationVertex: T): T[] | undefined;
-    getLongestPath(sourceVertex: T, destinationVertex: T): void;
-    getLowCostShortestPath(sourceVertex: T, destinationVertex: T): void;
-    getLowCostLongestPath(sourceVertex: T, destinationVertex: T): void;
-    getHighCostShortestPath(sourceVertex: T, destinationVertex: T): void;
-    getHighCostLongestPath(sourceVertex: T, destinationVertex: T): void;
+    // getLongestPath(sourceVertex: T, destinationVertex: T): void;
+    // getLowCostShortestPath(sourceVertex: T, destinationVertex: T): void;
+    // getLowCostLongestPath(sourceVertex: T, destinationVertex: T): void;
+    // getHighCostShortestPath(sourceVertex: T, destinationVertex: T): void;
+    // getHighCostLongestPath(sourceVertex: T, destinationVertex: T): void;
     removeVertex(vertex: T): void;
     showGraph(): void;
 }
-export class WeightedDirectedGraph<T> {
+export class WeightedDirectedGraph<T> implements IWeightedDirectedGraph<T> {
     private vertices: T[] = [];
     private edges: WeightedGraphNode<T>[] = [];
     private numberOfVertex: number = 0;

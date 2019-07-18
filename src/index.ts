@@ -6,7 +6,7 @@ import { LinearSearch } from './Search/Linear';
 import { BinarySearch } from './Search/Binary';
 import { UndirectedGraph } from './Graph/UndirectedGraph';
 import { DirectedGraph } from './Graph/DirectedGraph';
-import { WeightedDirectedGraph } from './Graph/WeightedGraph';
+import { WeightedDirectedGraph } from './Graph/WeightedDirectedGraph';
 import { InterpolationSearch } from './Search/Interpolation';
 
 
