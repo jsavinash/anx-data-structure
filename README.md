@@ -1,2 +1,6 @@
 # data-structure
-Data structure
+
+```bash
+npm install
+npm start
+```
