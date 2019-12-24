@@ -9,7 +9,7 @@ import { DirectedGraph } from "./Graph/DirectedGraph";
 import { WeightedDirectedGraph } from "./Graph/WeightedDirectedGraph";
 import { InterpolationSearch } from "./Search/Interpolation";
 
-import { rotate } from "./Array/problems/rotation/rotationByElement";
+import { rotate } from "./Array/problems/rotation/rotationByElement/rotationByElement";
 const array = [2, 3, 4, 5, 6, 9];
 console.log(rotate(array, 2, array.length));
 
