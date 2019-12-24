@@ -1,15 +1,17 @@
-import { CircularSinglyLinkedList } from './List/CircularSinglyLinkedList';
-import { DoublelyLinkedList } from './List/DoublelyLinkedList';
-import { SinglyLinkedList, nodeType } from './List/SinglyLinkedList';
-import { HashTable } from './HashTable';
-import { LinearSearch } from './Search/Linear';
-import { BinarySearch } from './Search/Binary';
-import { UndirectedGraph } from './Graph/UndirectedGraph';
-import { DirectedGraph } from './Graph/DirectedGraph';
-import { WeightedDirectedGraph } from './Graph/WeightedDirectedGraph';
-import { InterpolationSearch } from './Search/Interpolation';
+import { CircularSinglyLinkedList } from "./List/CircularSinglyLinkedList";
+import { DoublelyLinkedList } from "./List/DoublelyLinkedList";
+import { SinglyLinkedList, nodeType } from "./List/SinglyLinkedList";
+import { HashTable } from "./HashTable";
+import { LinearSearch } from "./Search/Linear";
+import { BinarySearch } from "./Search/Binary";
+import { UndirectedGraph } from "./Graph/UndirectedGraph";
+import { DirectedGraph } from "./Graph/DirectedGraph";
+import { WeightedDirectedGraph } from "./Graph/WeightedDirectedGraph";
+import { InterpolationSearch } from "./Search/Interpolation";
 
-
+import { rotate } from "./Array/problems/rotation/rotationByElement";
+const array = [2, 3, 4, 5, 6, 9];
+console.log(rotate(array, 2, array.length));
 
 // const hash = new HashTable(2);
 // hash.insert(1);
@@ -23,32 +25,30 @@ import { InterpolationSearch } from './Search/Interpolation';
 // const newLinear = new LinearSearch();
 // console.log('Finding 10', newLinear.findElement(9));
 
-const newUndirectedGraph = new WeightedDirectedGraph<number>();
-newUndirectedGraph.addVertex(1);
-newUndirectedGraph.addVertex(2);
-newUndirectedGraph.addVertex(3);
-newUndirectedGraph.addVertex(4);
-newUndirectedGraph.addVertex(5);
-newUndirectedGraph.addVertex(6);
-newUndirectedGraph.addEdge(1, 2, 3);
-newUndirectedGraph.addEdge(1, 5, 30);
-newUndirectedGraph.addEdge(2, 3, 80);
-newUndirectedGraph.addEdge(2, 5, 4);
-newUndirectedGraph.addEdge(3, 4, 50);
-newUndirectedGraph.addEdge(4, 5, 5);
-newUndirectedGraph.addEdge(4, 6, 34);
-newUndirectedGraph.showGraph();
-console.log('*************************BFS Traverse*******************************');
-newUndirectedGraph.traverseBFS(1, (vertex: number) => { console.log(vertex); }); // => 1 2 3 4 5 6
+// const newUndirectedGraph = new WeightedDirectedGraph<number>();
+// newUndirectedGraph.addVertex(1);
+// newUndirectedGraph.addVertex(2);
+// newUndirectedGraph.addVertex(3);
+// newUndirectedGraph.addVertex(4);
+// newUndirectedGraph.addVertex(5);
+// newUndirectedGraph.addVertex(6);
+// newUndirectedGraph.addEdge(1, 2, 3);
+// newUndirectedGraph.addEdge(1, 5, 30);
+// newUndirectedGraph.addEdge(2, 3, 80);
+// newUndirectedGraph.addEdge(2, 5, 4);
+// newUndirectedGraph.addEdge(3, 4, 50);
+// newUndirectedGraph.addEdge(4, 5, 5);
+// newUndirectedGraph.addEdge(4, 6, 34);
+// newUndirectedGraph.showGraph();
+// console.log('*************************BFS Traverse*******************************');
+// newUndirectedGraph.traverseBFS(1, (vertex: number) => { console.log(vertex); }); // => 1 2 3 4 5 6
 
-console.log('**************************DFS Traverse*******************************');
-newUndirectedGraph.traversDFS(1, (vertex: number) => { console.log(vertex); }); // => 1 2 3 4 5 6
-console.log('************************** path *******************************');
-console.log(newUndirectedGraph.pathFromTo(1, 4));
-console.log('**************************Short path*******************************');
-console.log(newUndirectedGraph.getShortestPath(1, 6));
-
-
+// console.log('**************************DFS Traverse*******************************');
+// newUndirectedGraph.traversDFS(1, (vertex: number) => { console.log(vertex); }); // => 1 2 3 4 5 6
+// console.log('************************** path *******************************');
+// console.log(newUndirectedGraph.pathFromTo(1, 4));
+// console.log('**************************Short path*******************************');
+// console.log(newUndirectedGraph.getShortestPath(1, 6));
 
 // const newBinary = new InterpolationSearch();
 // console.log('Finding 10', newBinary.findElement(11));
@@ -78,8 +78,6 @@ console.log(newUndirectedGraph.getShortestPath(1, 6));
 // });
 // console.log('***********End SinglyLinkedList**********');
 
-
-
 // console.log('***********Start CircularSinglyLinkedList**********');
 // const newCircularSinglyLinkedList = new CircularSinglyLinkedList<number>();
 // newCircularSinglyLinkedList.insertAtEnd(1);
@@ -101,7 +99,6 @@ console.log(newUndirectedGraph.getShortestPath(1, 6));
 // console.log('Size', newCircularSinglyLinkedList.getSize());
 // console.log('***********End CircularSinglyLinkedList**********');
 
-
 // console.log('***********Start DoublelyLinkedList**********');
 // const newDoublelyLinkedListObject = new DoublelyLinkedList();
 // newDoublelyLinkedListObject.addNode(1);
@@ -121,6 +118,3 @@ console.log(newUndirectedGraph.getShortestPath(1, 6));
 //     }
 // });
 // console.log('***********End DoublelyLinkedList**********');
-
-
-
