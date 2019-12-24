@@ -2,12 +2,12 @@
 
 ### Procedures
 
-- [1 :: Clarification]
-- [2 :: Algorithm]
-- [3 :: Implementation]
-- [4 :: Test case]
-- [5 :: Analysis :: Time Complexity]
-- [6 :: Analysis :: Space Complexity]
+- [1.Clarification]
+- [2.Algorithm]
+- [3.Implementation]
+- [4.Testcase]
+- [5.Time-Complexity]
+- [6.Space-Complexity]
 
 ### Procedure :: 1 :: Clarification
 
