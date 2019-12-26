@@ -9,15 +9,22 @@ import { DirectedGraph } from "./Graph/DirectedGraph";
 import { WeightedDirectedGraph } from "./Graph/WeightedDirectedGraph";
 import { InterpolationSearch } from "./Search/Interpolation";
 
-import { rotate } from "./Array/problems/rotation/rotationByElement/rotationByElement";
-import { merge2Array } from "./Array/problems/rotation/merge2Array/merge2Array";
+import { rotate } from "./Array/problems/rotationByElement/rotationByElement";
+import { merge2Array } from "./Array/problems/merge2Array/merge2Array";
+import { reverse } from "./Array/problems/reverseArrayOrString/reverseArrayOrString";
+
 // const array = [2, 3, 4, 5, 6, 9];
 // console.log(rotate(array, 2, array.length));
-const arr = [1, 'NA', 2, 3, 'NA'];
+// const arr = [1, 'NA', 2, 3, 'NA'];
+// const arr2 = [9, 5];
+// console.log('*******************merge2Array*******************');
+// console.log(merge2Array(arr, arr2));
+// console.log('*******************merge2Array*******************');
+
 const arr2 = [9, 5];
-console.log('*******************merge2Array*******************');
-console.log(merge2Array(arr, arr2));
-console.log('*******************merge2Array*******************');
+console.log('*******************reverse*******************');
+console.log(reverse(arr2));
+console.log('*******************reverse*******************');
 
 // const hash = new HashTable(2);
 // hash.insert(1);
