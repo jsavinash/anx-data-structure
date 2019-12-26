@@ -15,7 +15,7 @@
 #### Step : 1 :: Start
 #### Step : 2 :: Delcare a function take array or string as input.
 #### Step : 3 :: Input processing, if input is string, then convert it to array.
-#### Step : 4 :: Replace left with right input value, return reverse value.
+#### Step : 4 :: Create new array by pushing value from the left side.
 #### Step : 5 :: Stop
 
 ### Procedure :: 3 :: Implementation

@@ -12,6 +12,8 @@ import { InterpolationSearch } from "./Search/Interpolation";
 import { rotate } from "./Array/problems/rotationByElement/rotationByElement";
 import { merge2Array } from "./Array/problems/merge2Array/merge2Array";
 import { reverse } from "./Array/problems/reverseArrayOrString/reverseArrayOrString";
+import { cyclicallyRotate } from "./Array/problems/cyclicallyRotate/cyclicallyRotate";
+import { sortPositiveNumber } from "./Array/problems/sortPositiveNumber/sortPositiveNumber";
 
 // const array = [2, 3, 4, 5, 6, 9];
 // console.log(rotate(array, 2, array.length));
@@ -21,10 +23,23 @@ import { reverse } from "./Array/problems/reverseArrayOrString/reverseArrayOrStr
 // console.log(merge2Array(arr, arr2));
 // console.log('*******************merge2Array*******************');
 
-const arr2 = [9, 5];
-console.log('*******************reverse*******************');
-console.log(reverse(arr2));
-console.log('*******************reverse*******************');
+// const arr2 = [9, 5];
+// console.log('*******************reverse*******************');
+// console.log(reverse(arr2));
+// console.log('*******************reverse*******************');
+
+// const arr2 = [9, 5, 6, 4, 7];
+// console.log('*******************cyclicallyRotate*******************');
+// console.log('input', arr2);
+// console.log(cyclicallyRotate(arr2));
+// console.log('*******************cyclicallyRotate*******************');
+
+
+const arr2 = [-9, -5, -6, 8, 7, 1];
+console.log('*******************sortPositiveNumber*******************');
+console.log('input', arr2);
+console.log(sortPositiveNumber(arr2));
+console.log('*******************sortPositiveNumber*******************');
 
 // const hash = new HashTable(2);
 // hash.insert(1);
